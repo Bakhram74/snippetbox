@@ -7,11 +7,13 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"snippetbox/pkg/models/mysql"
 )
 
 type application struct {
 	errorLog *log.Logger
 	infoLog  *log.Logger
+	snippets *mysql.SnippetModel
 }
 
 func main() {
@@ -28,6 +30,7 @@ func main() {
 	app := application{
 		errorLog: errorLog,
 		infoLog:  infoLog,
+		snippets: &mysql.SnippetModel{DB: db},
 	}
 
 	svr := &http.Server{
