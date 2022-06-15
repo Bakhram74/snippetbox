@@ -3,11 +3,11 @@ package main
 import (
 	"database/sql"
 	"flag"
+	"github.com/Bakhram74/snippetbox.git/pkg/models/mysql"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
 	"net/http"
 	"os"
-	"snippetbox/pkg/models/mysql"
 )
 
 type application struct {
