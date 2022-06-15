@@ -17,7 +17,7 @@ type application struct {
 }
 
 func main() {
-	dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=1", "Сетевой адрес веб-сервера")
+	dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "Сетевой адрес веб-сервера")
 	addr := flag.String("address", ":4000", "Сетевой адрес HTTP")
 	flag.Parse()
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
